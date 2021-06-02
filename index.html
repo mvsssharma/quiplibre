@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quiplibre</title>
+  <link rel="icon" href="data:image/png;base64,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" type="image/png">
+  <style>input, button {font-size: 10vh;}</style>
+</head>
+<body>
+<h1 id="roomname">Quiplibre</h1>
+<div id="attrDiv"><i>Quiplibre is free software, under <a href="LICENSE.txt">AGPL v3+</a>. Its source code can be found <a href="https://github.com/wyattscarpenter/quiplibre">here</a>.</i></div>
+<div id="nameDiv"></div><div id="pointsDiv"></div>
+<div id="prevDiv"></div>
+<div id="playDiv" style="font-size: 10vh;">
+  Enter a room name <input id="roomBox"></input> then <button onclick="join(roomBox.value)">Join</button> or <button onClick='host(roomBox.value)'>Host</button>
+</div>
+<form id="form" onSubmit="sendAnswer()" target="playDiv" formaction="#" style="display: none;">
+    <input id="inputBox"></input><input type="submit" value="Submit"></input>
+</form>
+<div id="buttonDiv" style="display: none;">
+  <button id="startButton" onClick="nextRound()">start the game</button>
+</div>
+<script src="https://unpkg.com/peerjs@1.3.0/dist/peerjs.min.js"></script>
+<script>
+form.addEventListener("submit", function(event){event.preventDefault();}, false);
+
+//join if we have a fragment, for sharing purposes.
+if(window.location.hash){join(window.location.hash.substring(1))};
+
+function toQuiplibreSlug(s){return s.toLowerCase().replace(/[^a-z0-9]/g, "");}
+function toQuiplibreRoomId(s){return "quiplibre_"+toQuiplibreSlug(s);}
+function errorAlert(error){
+  alert("There has been a networking error; if you find yourself unable to play, please refresh the page.\n"+error);
+  console.log(error);
+}
+
+function join(name){
+  roomid = toQuiplibreRoomId(name);
+  var peer = new Peer({debug: 3});
+  peer.on('error', errorAlert);
+  peer.on('open', function(id) {
+    console.log('My peer ID is: ' + id);
+    conn = peer.connect(roomid);
+    conn.on('open', function() {
+      // Receive messages
+      conn.on('data', function(data) {
+        console.log('Received', data);
+        if(data.constructor === Array){handle(data[0], data[1]);}
+      });
+      conn.send('Hello!');
+    });
+  });
+  becomeSmallScreen(name);
+}
+
+function host(name){
+  //connect
+  roomid = toQuiplibreRoomId(name);
+  var peer = new Peer(roomid,{debug: 3});
+  peer.on('error', errorAlert);
+  peer.on('open', function(id) {
+    console.log('My peer ID is: ' + id);
+    peer.on('connection', function(conn){
+      console.log("receiving a connection");
+      conn.on('open', function() {
+        // A new player has arrived.
+	if (!gameBegun){
+          players.push(new Player(conn, "player" + playerId++));
+          conn.on('data', function(data) {
+            console.log(conn, " sent ", data);
+            if(data && data.constructor === Array){handlePlayer(conn,data[0],data[1]);}
+          });
+	}
+      });
+    });
+  });
+  becomeBigScreen(name);
+}
+
+
+//big screen stuff
+function becomeBigScreen(name){
+roomname.innerHTML += ": "+name
+playDiv.innerHTML = "Hi, welcome to Quiplibre! Visit https://wyattscarpenter.github.io/quiplibre#"+toQuiplibreSlug(name)+" to join! Room code: "+name+"<br>"+
+  "No players established.<br>"+
+  "(You need at least two people to connect in order to play Quiplibre.)";
+buttonDiv.style = ""; //show, by removing display: none;
+}
+
+
+//big screen globals
+var gameBegun = false;
+var playerId = 0;
+var players = [];
+var playerPairs = [];
+var pp = []; //the current playerPair
+var round = 0;
+const maxRounds = 3; //a nice number of rounds
+var choices = [];
+var votes = [0,0];
+
+function randInt(min, max) {
+  if (max === undefined) {
+    max = min;
+    min = 0;
+  }
+  return Math.random() * (max - min) + min | 0;
+}
+
+class Player {
+  constructor(conn, name) {
+    this.conn = conn;
+    this.name = name;
+    this.state = "nameless";
+    this.prompts = [];
+    this.answers = [];
+    this.score = 0;
+
+    this.send(['displayPrompt', "What is your name?"]);
+  }
+
+  send(data){
+    this.conn.send(data);
+  }
+
+  disconnect() {
+    const ndx = players.indexOf(this);
+    if (ndx >= 0) {
+      players.splice(ndx, 1);
+    }
+  }
+  receiveAnswer(cmd){
+    //the idea is to check if the response is to the right question
+    //to prevent errors
+    console.log(this);
+    console.log(cmd.prompt+" "+cmd.answer);
+    if(cmd.answer==""){console.log("ignoring empty response")}
+    else if(this.state=="rest"){console.log("player is at rest!");}
+    else if(this.state=="nameless"&&cmd.prompt=="What is your name?"){
+      this.send(["updateName", cmd.answer]);
+      this.send(["updateScore", 0]);
+      this.name = cmd.answer;
+      this.state = "rest";
+      this.send(["display", "<p>Your game should begin shortly! Look at the big screen!</p>"]);
+      display("<p>Last player to join: "+cmd.answer+"<br>total players: "+playerId+"</p>");
+    } else if(this.state == "prompt0"){
+      if (cmd.prompt == this.prompts[0]){
+        this.answers[0] = cmd.answer;
+        this.send(["displayPrompt", this.prompts[1]]);
+        this.state = "prompt1";
+      }
+    } else if(this.state == "prompt1"){
+      if (cmd.prompt == this.prompts[1]){
+        this.answers[1] = cmd.answer;
+        this.send(["display",
+          "<p>Excellent! Now you just have to wait for everyone else to answer.</p>"]
+        );
+        this.state = "rest";
+      }
+      if(allPlayersHaveAnswered()){
+        progressJudgement();
+      }
+    }
+  }
+  receiveChoice(cmd){
+  console.log(this, " handling choice ", cmd);
+  console.log(cmd.choices[0]!=choices[0]||cmd.choices[1]!=choices[1]);
+    if(cmd.choices[0]!=choices[0]||cmd.choices[1]!=choices[1]){//remember, == does not work on arrays
+      console.log("ignoring choice as it's between incorrect options");
+    } else if(this.state!="choosing"){
+      console.log("ignoring choice as player state is "+this.state);
+    } else {
+      votes[cmd.index]++;
+      this.send(["display","<p>You voted for option "+(cmd.index+1)+".</p>"])
+      this.state = "rest";
+      if(votes[0]+votes[1] == players.length){
+        awardPoints();
+        progressJudgement();
+      }
+    }
+  }
+}
+Player.prototype.toString = function(){return this.name};
+
+// big screen game logic fns
+function nextRound(){
+  if (players.length <= 1){
+    console.log(players.length, "players, that's not enough");
+  } else {
+    gameBegun = true;
+    round++;
+    if (round <= maxRounds){
+      allPlayers(function f(p){p.prompts = []; p.answers = []});
+      var len = players.length
+      for (var i=0; i<len; ++i) { //todo: could refactor this to use allPlayers
+        playerPairs.push([players[i], pullRandomPlayer(players[i]), pullPrompt()]);
+        playerPairs[i][0].prompts[0] = playerPairs[i][2];
+        playerPairs[i][1].prompts[1] = playerPairs[i][2];
+      }
+      for (var i=0; i<len; ++i) {
+        players[i].send(["displayPrompt", players[i].prompts[0]]);
+        players[i].state = "prompt0";
+      }
+
+      display("<p>Time for a nice round of Quiplibre! Round "+round+", to be exact!</p>");
+      buttonDiv.innerHTML = "";
+    }else{
+      endGame();
+    }
+  }
+}
+
+function progressJudgement(){
+  votes = [0,0];
+  if (playerPairs.length != 0){
+    pp = playerPairs.splice(Math.floor(Math.random()*playerPairs.length), 1)[0];
+    display("<p><b>"+pp[2]+"</b></p>"+"<p>"+pp[0].answers[0]+"<br>OR<br>"+pp[1].answers[1]+"</p>");
+    choices = [pp[0].answers[0],pp[1].answers[1], pp[2]];
+    allPlayers(function f(p){
+      p.send(["displayChoice", choices]);
+      p.state = "choosing";
+    });
+  } else {
+      nextRound();
+  }
+}
+
+function awardPoints(){
+  var scoreStr = "Previous result:<br>";
+  for(var i = 0; i<votes.length;i++){
+    scoreStr = scoreStr.concat(pp[i].name+" won "+votes[i]+" votes and thus "+computeScore(i)+" points!<br>");
+    pp[i].score += computeScore(i);
+    pp[i].send(["updateScore", pp[i].score]);
+  }
+  prevDiv.innerHTML = scoreStr;
+}
+
+function endGame(){
+  sortPlayers();
+    display("<p>End of the game! Here's a scoreboard:</p>"+
+      players.reduce(function f(acc, p){
+        return acc+p.name+": "+p.score+"<br>";
+      }, "")+
+      "<br><button onclick=\"newGame()\" value>New Game with Same Players</button>"+
+      "<br><button onclick=\"location.reload()\" value>New Game with New Players</button>"+
+      "<br><a href=\"https://github.com/wyattscarpenter/quiplibre\">"+
+        "Submit prompts or improvements at Github"+
+      "</a>"
+    )
+    attrDiv.style.visibility = ""; //show, by removing visibility: hidden;
+    //todo: could send something to players
+}
+
+function newGame(){
+  prevDiv.innerHTML = "Previous winner: "+players[0];
+  round = 0;
+  allPlayers(function f(p){
+    p.score=0;
+    p.send(["updateScore", 0]);
+  });
+  nextRound();
+}
+
+// big screen helper & utility fns
+function display(html){playDiv.innerHTML = html;}
+
+function computeScore(i){return votes[i] * round}
+
+function pullPrompt(){
+  if (prompts.length == 0){
+    return "What's a good prompt for a round of Quiplibre?"+
+      " (Please send us the winning answer of this round, "+
+      "as you have exhausted our list of prompts)";}
+  return prompts.splice(Math.floor(Math.random()*prompts.length), 1)[0];
+}
+
+randomPlayers = [];
+function pullRandomPlayer(excludedPlayer){
+  //remember that excludedPlayer is just a reference to a player
+  //use slice to shallow-copy array
+  if (randomPlayers.length == 0){randomPlayers = players.slice()};
+  tmpPlayers = randomPlayers.filter(function f(p){return (p != excludedPlayer)});
+  var i = Math.floor(Math.random()*(tmpPlayers.length-1));
+  randomPlayers = randomPlayers.filter(function f(p){return (p != tmpPlayers[i])})
+  return tmpPlayers[i];
+}
+
+function allPlayers(pred){ //query all players or apply a fn to them
+  ret = true;
+  var len = players.length
+  for (var i=0; i<len; ++i) {
+    ret = (pred(players[i])) && ret; //must avoid short-circuit eval
+  }
+  return ret;
+}
+
+function allPlayersHaveAnswered(){
+  return allPlayers(function f(p){return p.answers.length==2;});
+}
+
+function sortPlayers(){//descending. In-place and returns arr
+  return players.sort(function f(a, b){return (b.score - a.score)});
+}
+
+//small screen stuff
+function becomeSmallScreen(name){
+  const attrDiv = document.querySelector('#attrDiv');
+  const nameDiv = document.querySelector('#nameDiv');
+  const pointsDiv = document.querySelector('#pointsDiv');
+  const playDiv = document.querySelector('#playDiv');
+  const form = document.querySelector('#form');
+  const inputBox = document.querySelector('#inputBox');
+
+  roomname.innerHTML += ": "+name
+  playDiv.innerHTML = "Connecting to quiplibre host...";
+  attrDiv.style.visibility="hidden"; //hide so the player can't accidentally click the links
+}
+
+function showForm(){
+  form.style = ""; //show, by removing display: none;
+}
+
+function hideForm(){
+  form.style = "display: none;";
+}
+
+function clearInputBox(){
+  inputBox.value = "";
+}
+
+function connect() {
+  display("<p>Connected to host...</p>");
+}
+
+function disconnect() {
+  display("<p>Disconnected.</p>");
+}
+
+function displayPrompt(prompt) {
+  console.log("displaying "+prompt);
+  display("<p><b id=\"prompt\">"+prompt+"</b></p>");
+  showForm();
+  inputBox.focus();
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+  }, false);
+}
+
+function displayChoice(choices){
+  console.log(choices);
+  hideForm();
+  display(choices[2]+"<br><button id=\"choice0\" onClick=\"sendChoice(0)\">"+choices[0]+"</button>"+
+  "<br>OR<br><button id=\"choice1\" onClick=\"sendChoice(1)\">"+choices[1]+"</button>");
+}
+
+function updateName(name) {
+  nameDiv.innerHTML = "Name: " + name;
+}
+
+function updateScore(score) {
+  pointsDiv.innerHTML = "Points: " + score;
+}
+
+function sendAnswer() {
+  conn.send(['receiveAnswer', {
+    prompt: document.querySelector('#prompt').innerHTML,
+    answer: document.querySelector('#inputBox').value
+  }]);
+  if(inputBox.value){clearInputBox();hideForm();}
+};
+
+function sendChoice(i) {
+  conn.send(['receiveChoice', {
+    choices: [document.querySelector('#choice0').innerHTML,document.querySelector('#choice1').innerHTML],
+    index: i
+  }]);
+};
+
+//prompts
+prompts = [
+  "___ was my nickname in college.",
+  "What's the worst song to play during an indian wedding?",
+  "Critics are raving about the new children's cartoon about the Holocaust, ___",
+  "What's something you DON'T want to hear your doctor say?",
+  "What's something you DON'T want to hear your boss say?",
+  "If they renamed Delhi, what would they rename it too?",
+  "What is the most creepy dialogue you heard in a movie?",
+  "What’s the best Wi-Fi name you’ve seen?",
+  "What kind of secret society would you like to start?",
+  "If you were arrested with no explanation, what would your friends and family assume you had done?",
+  "Worst reason to be called to the CEO's office",
+  "Name something you can use in place of a PRD",
+  "The wierdest alcoholic drink you ever had?",
+  "The wierdest thing you ever stole?",
+  "If you get a chance to name yourself, you would be ___.",
+  "Write something that you shouldn't ask at Sprint Planning.",
+  "What is the nerdiest thing you do in your spare time?",
+  "Name the funniest thing you saw your colleague do?",
+  "Name one song you want everyone in the team to dance on?",
+  "A song you want to dedicate to Nikhil/Ronil?",
+  "What's a film that should never have been made?",
+  "What's a good name for a city populated entirely by engineers?",
+  "What's a group of people it will always be ok to make fun of?",
+  "The least likely among us to bath everyday is ___",
+  "What's your first order when you become prime minister?",
+  "If you want to resign over an email, what would you write?",
+  "A bollywood movie which deserved to win an oscar is __.",
+  "What's the lowest price at which you would betray your friends?",
+  "What's the funniest thing for a product manager to say?",
+  "What's a holiday that doesn't exist, but should?",
+  "What would you name the EIGHTH day of the week?",
+  "Make up a name for a number between 2 and 3.",
+  "What's something people take seriously that they shouldn't?",
+  "What's something you refuse to learn about?",
+  "What's a bad present to give at a wedding?",
+  "Most useless talent you have?",
+  "Make a weird rule that everyone else has to follow for the next one hour",
+  "A funny rumour you want to create?",
+  "If you can jump into a pool full of something, what would it be?",
+  "A dare you want to give to someone in the team?",
+  "Make up a random funny quote?",
+  "What's the funniest thing you heard in a standup meeting",
+  "How can you tell if your teammate is fresh out of B-School?",
+]
+
+//communication redirection fns
+function handle(instruction, details){
+  console.log("handling", "return "+instruction+"("+details+");");
+  return eval(instruction)(details);
+} //polytropos
+
+function handlePlayer(conn, instruction, details){
+  //this seems circuitous but other ways didn't work
+  return allPlayers(function(player){
+    if(player.conn==conn){
+      return player[instruction](details);
+    }
+  });
+}
+</script>
+</body>
+</html>
